@@ -1,9 +1,10 @@
 <template name="layout">
-  <div class="container">
+  <div class="page-wrapper">
     {{> header}}
     {{> errors}}
-    <div id="main" class="row-fluid">
-      {{> yield}}
-    </div>
+<!--     <div id="main" class="row-fluid"> -->
+    {{> yield}}
+<!--     </div> -->
+    {{> footer}}
   </div>
 </template>

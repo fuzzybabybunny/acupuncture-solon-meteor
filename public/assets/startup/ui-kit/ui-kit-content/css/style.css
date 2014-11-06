@@ -2643,6 +2643,10 @@ section * {
   font-weight: 500;
   margin: 0 0 9px;
 }
+.content-20 .centered-signup-form,
+.content-20 .centered-signup-form + div {
+  vertical-align: middle;
+}
 .content-20 .signup-form,
 .content-20 .signup-form + div {
   display: inline-block;

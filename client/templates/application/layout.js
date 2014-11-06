@@ -16,4 +16,5 @@ Template.layout.created = function(){
 
 Template.layout.rendered = function(){
 	$('footer').append('<script src="/assets/startup/common-files/js/startup-kit.js"></script>');
+	initializeStartupKit(jQuery);
 };

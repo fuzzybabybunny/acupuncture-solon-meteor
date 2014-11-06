@@ -1,3 +1,134 @@
+var patient1Id, patient2Id, dictor1Id;
+
+if (Meteor.users.find().count() === 0) {
+
+  Meteor.users.insert({
+    username: 'admin',
+    email: 'none@none.com',
+    password: '123456',
+    profile: {
+        firstName: 'Admin',
+        lastName: 'Account',
+        role: 'admin'
+    }
+  });
+
+  dictor1Id = Meteor.users.insert({
+    username: 'doctor',
+    email: 'doctor@none.com',
+    password: '123456',
+    profile: {
+        firstName: 'Zheng-Ping',
+        lastName: 'Chen',
+        role: 'doctor'
+    }
+  });
+
+  patient1Id = Meteor.users.insert({
+    username: 'johnsmith',
+    email: 'john@none.com',
+    password: '123456',
+    profile: {
+        firstName: 'John',
+        lastName: 'Smith',
+        middle_name: 'Mallory',
+        homePhone: '440-333-3333',
+        workPhone: '440-444-4444',
+        cellPhone: '440-222-2222',
+        address1: '1234 Main St.',
+        address2: 'Apt 1',
+        city: 'Solon',
+        state: 'OH',
+        zipcode: '44023',
+        occupation: 'Engineer',
+        employer: 'BIC',
+        relationships: 'Single',
+        emergencyName: 'Tom Smith',
+        emergencyPhone: '440-222-2221',
+        referralName: 'Dr. Karen Smith',
+        referralPhone: '440-111-1111',
+        role: 'patient'
+    }
+  });
+
+  patient2Id = Meteor.users.insert({
+    username: 'janesmith',
+    email: 'jane@none.com',
+    password: '123456',
+    profile: {
+        firstName: 'Jane',
+        lastName: 'Smith',
+        middle_name: 'Mallory',
+        homePhone: '440-333-3333',
+        workPhone: '440-444-4444',
+        cellPhone: '440-222-2222',
+        address1: '1234 Main St.',
+        address2: 'Apt 1',
+        city: 'Solon',
+        state: 'OH',
+        zipcode: '44023',
+        occupation: 'Teacher',
+        employer: 'Solon Schools',
+        relationships: 'Single',
+        emergencyName: 'Tom Smith',
+        emergencyPhone: '440-222-2221',
+        referralName: 'Dr. Karen Smith',
+        referralPhone: '440-111-1111',
+        role: 'patient'
+    }
+  });
+
+};
+
+if (Appointments.find().count() === 0) {
+
+  Appointments.insert({
+    date: new Date('2014/01/23'),
+    patientId: patient1Id,
+    doctorId: dictor1Id,
+    reason: 'Headaches',
+    treatment: 'lorem ipsum',
+    notes: 'lorem ipsum',
+    price: 8500,
+    transactionId: ''
+  });
+
+  Appointments.insert({
+    date: new Date('2014/01/27'),
+    patientId: patient1Id,
+    doctorId: dictor1Id,
+    reason: 'Headaches',
+    treatment: 'lorem ipsum',
+    notes: 'lorem ipsum',
+    price: 8500,
+    transactionId: ''
+  });
+
+  Appointments.insert({
+    date: new Date('2014/02/02'),
+    patientId: patient2Id,
+    doctorId: dictor1Id,
+    reason: 'Smoking',
+    treatment: 'lorem ipsum',
+    notes: 'lorem ipsum',
+    price: 8500,
+    transactionId: ''
+  });
+
+  Appointments.insert({
+    date: new Date('2014/02/03'),
+    patientId: patient2Id,
+    doctorId: dictor1Id,
+    reason: 'Smoking',
+    treatment: 'lorem ipsum',
+    notes: 'lorem ipsum',
+    price: 8500,
+    transactionId: ''
+  });
+
+};
+
+
 // Fixture data 
 if (Posts.find().count() === 0) {
   var now = new Date().getTime();
@@ -68,5 +199,5 @@ if (Posts.find().count() === 0) {
       commentsCount: 0,
       upvoters: [], votes: 0
     });
-  }
-}
+  };
+};

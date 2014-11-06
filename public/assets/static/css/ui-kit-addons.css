@@ -11,3 +11,8 @@
   color: #34495e;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+.contacts-2 .map {
+  height: 300px;
+  margin: 25px 0 60px;
+}

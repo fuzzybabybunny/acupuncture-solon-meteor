@@ -12,8 +12,6 @@ Template.layout.created = function(){
 	$('head').append('<script src="/assets/startup/common-files/js/jquery.svganim.js"></script>');
 	$('head').append('<script src="/assets/startup/common-files/js/jquery.backgroundvideo.min.js"></script>');
 	$('head').append('<script src="/assets/startup/common-files/js/froogaloop.min.js"></script>');
-};
-
-Template.layout.rendered = function(){
 	$('footer').append('<script src="/assets/startup/common-files/js/startup-kit.js"></script>');
 };
+

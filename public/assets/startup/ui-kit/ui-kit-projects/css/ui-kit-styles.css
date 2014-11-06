@@ -725,7 +725,7 @@ section * {
   }
   .dockbar .menu-btn span {
     content: '';
-    background-image: url("../../../common-files/icons/menu-icon@2x.png");
+    background-image: url("/assets/startup/common-files/icons/menu-icon@2x.png");
     -webkit-background-size: 17px 12px;
     -moz-background-size: 17px 12px;
     -o-background-size: 17px 12px;
@@ -935,7 +935,7 @@ body .colapsed-menu::-webkit-scrollbar {
   top: 0;
   right: 0;
   bottom: 0;
-  background: #ebedee url('../../../common-files/img/header/ipad@2x.png') 100% 50% no-repeat;
+  background: #ebedee url('/assets/startup/common-files/img/header/ipad@2x.png') 100% 50% no-repeat;
   -webkit-background-size: 826px 772px;
   -moz-background-size: 826px 772px;
   -o-background-size: 826px 772px;
@@ -1256,7 +1256,7 @@ body .colapsed-menu::-webkit-scrollbar {
   }
 }
 .projects-2 .project-1 {
-  background-image: url('../../../common-files/img/Hawaii_001.jpg');
+  background-image: url('/assets/startup/common-files/img/Hawaii_001.jpg');
 }
 .projects-2 .project-1 .container h1 {
   font-size: 50px;
@@ -1288,7 +1288,7 @@ body .colapsed-menu::-webkit-scrollbar {
   }
 }
 .projects-2 .project-2 {
-  background-image: url('../../../common-files/img/Italy_001.jpg');
+  background-image: url('/assets/startup/common-files/img/Italy_001.jpg');
 }
 @media (max-width: 480px) {
   .projects-2 .project-2 .hero-unit h1 {
@@ -1296,7 +1296,7 @@ body .colapsed-menu::-webkit-scrollbar {
   }
 }
 .projects-2 .project-3 {
-  background-image: url('../../../common-files/img/NY_002.jpg');
+  background-image: url('/assets/startup/common-files/img/NY_002.jpg');
 }
 .projects-2 .project-3 [class*="fui-"] {
   font-size: 95px;

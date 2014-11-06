@@ -32,7 +32,7 @@ startupKit.hideCollapseMenu = function() {
     }, 400)
 }
 
-Meteor.startup(function () {
+$(function () {
     $('.page-wrapper, .navbar-fixed-top, .navbar-collapse a, .navbar-collapse button, .navbar-collapse input[type=submit]').on('click', function(e) {
         if($('html').hasClass('nav-visible')) {
             setTimeout(function(){
@@ -1051,7 +1051,7 @@ startupKit.uiKitContent.content35 = function() {
         $('.content-35-slider').bxSlider({
             'controls': false,
             'pagerCustom': '.content-35-customPager',
-            'adaptiveHeight': true,
+            'adaptiveHeight': false,
             'infiniteLoop': false
         });
     }
@@ -1416,7 +1416,7 @@ startupKit.uiKitFooter.footer15 = function() {};
  * Global part of startup-kit
  * */
 (function($) {
-    Meteor.startup(function() {
+    $(function() {
         /* implementing headers */
         for (header in startupKit.uiKitHeader) {
             headerNumber = header.slice(6);

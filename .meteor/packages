@@ -11,3 +11,6 @@ ian:accounts-ui-bootstrap-3
 audit-argument-checks
 iron:router
 standard-app-packages
+aldeed:autoform
+aldeed:collection2
+

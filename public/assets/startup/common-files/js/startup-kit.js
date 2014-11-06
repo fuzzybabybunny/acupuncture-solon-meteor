@@ -32,7 +32,7 @@ startupKit.hideCollapseMenu = function() {
     }, 400)
 }
 
-$(function () {
+Meteor.startup(function () {
     $('.page-wrapper, .navbar-fixed-top, .navbar-collapse a, .navbar-collapse button, .navbar-collapse input[type=submit]').on('click', function(e) {
         if($('html').hasClass('nav-visible')) {
             setTimeout(function(){
@@ -1416,7 +1416,7 @@ startupKit.uiKitFooter.footer15 = function() {};
  * Global part of startup-kit
  * */
 (function($) {
-    $(function() {
+    Meteor.startup(function() {
         /* implementing headers */
         for (header in startupKit.uiKitHeader) {
             headerNumber = header.slice(6);

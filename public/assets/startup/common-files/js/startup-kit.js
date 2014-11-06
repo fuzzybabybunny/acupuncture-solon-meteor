@@ -32,7 +32,8 @@ startupKit.hideCollapseMenu = function() {
     }, 400)
 }
 
-$(function () {
+Meteor.startup(function () {
+    console.log("fired!");
     $('.page-wrapper, .navbar-fixed-top, .navbar-collapse a, .navbar-collapse button, .navbar-collapse input[type=submit]').on('click', function(e) {
         if($('html').hasClass('nav-visible')) {
             setTimeout(function(){
@@ -1416,11 +1417,14 @@ startupKit.uiKitFooter.footer15 = function() {};
  * Global part of startup-kit
  * */
 (function($) {
-    $(function() {
+    Meteor.startup(function() {
+        console.log("fired inside global of startup-kit.js");
         /* implementing headers */
         for (header in startupKit.uiKitHeader) {
             headerNumber = header.slice(6);
+            console.log("headerNumber: ", headerNumber);
             if (jQuery('.header-' + headerNumber).length != 0) {
+                console.log("headerNumber: ", headerNumber, " initializing");
                 startupKit.uiKitHeader[header]();
             };
         }

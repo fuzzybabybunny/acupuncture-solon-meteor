@@ -13,3 +13,5 @@ iron:router
 standard-app-packages
 aldeed:autoform
 aldeed:collection2
+mrt:meteor-nodemailer
+

@@ -993,7 +993,7 @@ section * {
   transform-style: preserve-3d;
 }
 .header-1-sub .pt-page-1 .background {
-  background-image: url("/assets/startup/common-files/img/NY_002.jpg");
+  background-image: url("/assets/images/acu40.jpg");
   opacity: 75;
   filter: alpha(opacity=7500);
   opacity: 0.75;
@@ -1001,7 +1001,7 @@ section * {
   background-position: 50% 30%;
 }
 .header-1-sub .pt-page-2 .background {
-  background-image: url("/assets/startup/common-files/img/header/img-2.jpg");
+  background-image: url("/assets/images/acu20.jpg");
   opacity: 75;
   filter: alpha(opacity=7500);
   opacity: 0.75;
@@ -1009,7 +1009,7 @@ section * {
   background-position: 50% 30%;
 }
 .header-1-sub .pt-page-3 .background {
-  background-image: url("/assets/startup/common-files/img/header/img-3.jpg");
+  background-image: url("/assets/images/acu9.jpg");
   opacity: 75;
   filter: alpha(opacity=7500);
   opacity: 0.75;
@@ -3134,7 +3134,7 @@ section * {
   }
 }
 .header-10-sub .background {
-  background-image: url('/assets/startup/common-files/img/header/img-3.jpg');
+  background-image: url('/assets/images/acu9.jpg');
   opacity: 20;
   filter: alpha(opacity=2000);
   opacity: 0.2;

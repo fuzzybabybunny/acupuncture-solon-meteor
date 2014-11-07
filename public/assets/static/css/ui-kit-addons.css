@@ -24,3 +24,8 @@
 .faq .question {
   font-size: 18px;
 }
+
+.faq .answer li {
+  font-size: 18px;
+  margin: 10px 0;
+}

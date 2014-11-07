@@ -1416,15 +1416,16 @@ startupKit.uiKitFooter.footer15 = function() {};
 /** 
  * Global part of startup-kit
  * */
-initializeStartupKit = function($){
-    Meteor.startup(function() {
+initializeStartupKit = function(){
         console.log("fired inside global of startup-kit.js");
         /* implementing headers */
         for (header in startupKit.uiKitHeader) {
+            console.log("startupKit.uiKitHeader: ", startupKit.uiKitHeader);
             headerNumber = header.slice(6);
             console.log("headerNumber: ", headerNumber);
             if (jQuery('.header-' + headerNumber).length != 0) {
                 console.log("headerNumber: ", headerNumber, " initializing");
+                console.log("header: ", header);
                 startupKit.uiKitHeader[header]();
             };
         }
@@ -1522,17 +1523,12 @@ initializeStartupKit = function($){
         }).on('mouseleave', '[class*="tile-"]', function() {
             $(this).closest('.tiles').find('[class*="tile-"]').removeClass('faded');
         });
-        
-        
-    });
-    //add some smooth for scroll
-
-
 };
+
 
 // Meteor.startup(function(){
 
-//   initializeStartupKit(jQuery);
+  initializeStartupKit();
 
 // });
 //swipe

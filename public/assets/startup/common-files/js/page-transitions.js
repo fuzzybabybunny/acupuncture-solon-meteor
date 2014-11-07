@@ -18,9 +18,11 @@ var PageTransitions = function() {
     support = Modernizr.cssanimations;
 
   function init(main) {
+    console.log("init pageTrans, ", main);
     $main = $(main);
     $pages = $main.children('.pt-page');
     pagesCount = $pages.length;
+    console.log("pagesCount", pagesCount);
 
     $pages.removeClass('pt-page-current').each(function() {
       var $page = $(this);

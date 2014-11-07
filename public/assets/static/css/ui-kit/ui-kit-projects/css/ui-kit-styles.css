@@ -1256,7 +1256,7 @@ body .colapsed-menu::-webkit-scrollbar {
   }
 }
 .projects-2 .project-1 {
-  background-image: url('/assets/startup/common-files/img/Hawaii_001.jpg');
+  background-image: url('/assets/images/acu21.jpg');
 }
 .projects-2 .project-1 .container h1 {
   font-size: 50px;
@@ -1288,7 +1288,7 @@ body .colapsed-menu::-webkit-scrollbar {
   }
 }
 .projects-2 .project-2 {
-  background-image: url('/assets/startup/common-files/img/Italy_001.jpg');
+  background-image: url('/assets/images/acu26.jpg');
 }
 @media (max-width: 480px) {
   .projects-2 .project-2 .hero-unit h1 {

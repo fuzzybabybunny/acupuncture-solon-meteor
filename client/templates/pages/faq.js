@@ -14,7 +14,7 @@ var faqContents = [
   }, {
   	number: "Four",
     question: "What does the patient feel during treatment?",
-    answer: "<p>Common feelings during acupuncture are local distension, heaviness, numbness, soreness, or a sensation like a tiny electric shock. All of these feelings are mild. They indicate that the healing is in progress. Notify the doctor if these feelings become uncomfortable. </p> < p > Most patients find the treatment very relaxing, which brings on a feeling of well being.Most are surprised at how comfortable they are during the treatment and how easily the needles are placed.Some people even go to sleep during the treatment.A patient may feel a slight sensation upon entry and then pressure or a“ dull” or“ surging” reaction when the needle reaches the“ Qi” or correct point.Rest assured, the needles are different from the hypodermic needles that are given in injections.The tiny needles are specifically designed to be virtually painless. < /p>"
+    answer: "<p>Common feelings during acupuncture are local distension, heaviness, numbness, soreness, or a sensation like a tiny electric shock. All of these feelings are mild. They indicate that the healing is in progress. Notify the doctor if these feelings become uncomfortable. </p> <p> Most patients find the treatment very relaxing, which brings on a feeling of well being.Most are surprised at how comfortable they are during the treatment and how easily the needles are placed.Some people even go to sleep during the treatment.A patient may feel a slight sensation upon entry and then pressure or a“ dull” or“ surging” reaction when the needle reaches the“ Qi” or correct point.Rest assured, the needles are different from the hypodermic needles that are given in injections.The tiny needles are specifically designed to be virtually painless. </p>"
   }, {
   	number: "Five",
     question: "What is the procedure of treatment?",
@@ -26,7 +26,7 @@ var faqContents = [
   }, {
   	number: "Seven",
     question: "Why is acupuncture growing so rapidly in the US?",
-    answer: "<li>It is safe, effective, and has virtually no side effects.</li> < li > It uses the body’s own natural healing processes to effect relief. < /li> < li > It works on many health problems for which Western medicine is less effective. < /li> < li > It puts people back in control of their own bodies and health care. < /li> < li > It treats the whole body and not just the disease. < /li>"
+    answer: "<p><ul>It is safe, effective, and has virtually no side effects.</ul> <ul>It uses the body’s own natural healing processes to effect relief.</ul><ul> It works on many health problems for which Western medicine is less effective. </ul> <ul> It puts people back in control of their own bodies and health care. </ul><ul>It treats the whole body and not just the disease. </ul></p>"
   }
 ];
 

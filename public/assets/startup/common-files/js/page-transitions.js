@@ -18,18 +18,24 @@ var PageTransitions = function() {
     support = Modernizr.cssanimations;
 
   function init(main) {
-    console.log("init pageTrans, ", main);
+    // main is #pt-main
+    console.log("main variable of init function in page-transitions.js: ", main);
     $main = $(main);
     $pages = $main.children('.pt-page');
     pagesCount = $pages.length;
-    console.log("pagesCount", pagesCount);
+    // console.log("pagesCount", pagesCount);
 
     $pages.removeClass('pt-page-current').each(function() {
       var $page = $(this);
       $page.data('originalClassList', $page.attr('class'));
     }).eq(0).addClass('pt-page-current');
-
+    console.log("init in page-transitions began");
+    console.log("$main: ", $main);
+    console.log("$('#pt-main').get(0): ", $('#pt-main').get(0))
+    
     $main.get(0).className = $main.get(0).className.replace(/\s*pt-item-\d+\s*/ig, ' ');
+    console.log("init in page-transitions ended");
+
     $main.addClass('pt-item-1');
     $main.addClass('pt-first');
     if (pagesCount == 1) {

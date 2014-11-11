@@ -25,3 +25,6 @@ Meteor.publish('appointments', function() {
   return Appointments.find();
 });
 
+Meteor.publish('appointmentSubmissions', function() {
+  return AppointmentSubmissions.find();
+});

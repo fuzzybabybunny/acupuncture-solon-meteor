@@ -162,3 +162,23 @@ body {
   margin-bottom: 5px;
   pointer-events: auto;
 }
+
+/* responsive text queries */
+@media screen and (max-width: 992px) {
+  .header-1 .navbar .brand {
+    font-size: 95%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-1 .navbar .brand {
+    font-size: 60%;
+  }
+  .header-1 .navbar {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+  }
+}

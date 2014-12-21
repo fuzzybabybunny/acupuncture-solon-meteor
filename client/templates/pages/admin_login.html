@@ -1,4 +1,4 @@
-<template name="adminLogin">
+<template name="AdminLogin">
 	<section class="content-20 v-center bg-midnight-blue">
 		<div>
 	    <div class="container">
@@ -16,8 +16,9 @@
                     <input name="password" type="password" class="form-control">
                   </div>
                 </div>
-                <button class="btn btn-huge btn-info">Sign In</button>
+                <button type="submit" class="btn btn-huge btn-info">Sign In</button>
               </form>
+              {{> loginButtons}}
             </div>
 	        </div>
 	      </div>

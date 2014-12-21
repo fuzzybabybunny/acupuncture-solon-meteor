@@ -2,10 +2,10 @@ var patient1Id, patient2Id, dictor1Id;
 
 if (Meteor.users.find().count() === 0) {
 
-  Meteor.users.insert({
+  Accounts.createUser({
     username: 'admin',
     email: 'none@none.com',
-    password: '123456',
+    password: '12345678',
     profile: {
         firstName: 'Admin',
         lastName: 'Account',
@@ -13,10 +13,10 @@ if (Meteor.users.find().count() === 0) {
     }
   });
 
-  dictor1Id = Meteor.users.insert({
+  dictor1Id = Accounts.createUser({
     username: 'doctor',
     email: 'doctor@none.com',
-    password: '123456',
+    password: '12345678',
     profile: {
         firstName: 'Zheng-Ping',
         lastName: 'Chen',
@@ -24,10 +24,10 @@ if (Meteor.users.find().count() === 0) {
     }
   });
 
-  patient1Id = Meteor.users.insert({
+  patient1Id = Accounts.createUser({
     username: 'johnsmith',
     email: 'john@none.com',
-    password: '123456',
+    password: '12345678',
     profile: {
         firstName: 'John',
         lastName: 'Smith',
@@ -51,10 +51,10 @@ if (Meteor.users.find().count() === 0) {
     }
   });
 
-  patient2Id = Meteor.users.insert({
+  patient2Id = Accounts.createUser({
     username: 'janesmith',
     email: 'jane@none.com',
-    password: '123456',
+    password: '12345678',
     profile: {
         firstName: 'Jane',
         lastName: 'Smith',

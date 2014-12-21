@@ -1,0 +1,4 @@
+Template.AdminLayout.rendered = function(){
+
+
+};

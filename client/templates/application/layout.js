@@ -1,11 +1,11 @@
 Template.layout.rendered = function(){
-	console.log("body contents on layout.rendered: ", $('body')[0]);
+	// console.log("body contents on layout.rendered: ", $('body')[0]);
 
 };
 
 Template.loading.destroyed = function(){
 
-	console.log("destroyed!");
+	// console.log("destroyed!");
 	// debugger;
 };
 
@@ -17,14 +17,13 @@ Template.index.rendered = function(){
 	$('head').append('<script src="/assets/startup/flat-ui/js/bootstrap.min.js"></script>');
 	$('head').append('<script src="/assets/startup/common-files/js/masonry.pkgd.min.js"></script>');
 	$('head').append('<script src="/assets/startup/common-files/js/modernizr.custom.js"></script>');
-	
 	$('head').append('<script src="/assets/startup/common-files/js/easing.min.js"></script>');
 	$('head').append('<script src="/assets/startup/common-files/js/jquery.svg.js"></script>');
 	$('head').append('<script src="/assets/startup/common-files/js/jquery.svganim.js"></script>');
 	$('head').append('<script src="/assets/startup/common-files/js/jquery.backgroundvideo.min.js"></script>');
 	$('head').append('<script src="/assets/startup/common-files/js/froogaloop.min.js"></script>');
-	console.log("body contents on index.rendered: ", $('body')[0]);
-	console.log("#pt-main contents: ", $('#pt-main')[0]);
+	// console.log("body contents on index.rendered: ", $('body')[0]);
+	// console.log("#pt-main contents: ", $('#pt-main')[0]);
 
 	$('head').append('<script src="/assets/startup/common-files/js/page-transitions.js"></script>');
   $('head').append('<script src="/assets/startup/common-files/js/startup-kit.js"></script>');
@@ -35,7 +34,7 @@ Template.index.rendered = function(){
 // On server startup, if the database is empty, create some initial data.
 if (Meteor.isClient) {
   Meteor.startup(function () {
-    console.log("body contents on meteor.startup: ", $('body')[0]);
+    // console.log("body contents on meteor.startup: ", $('body')[0]);
   });
 }
 

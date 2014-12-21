@@ -14,3 +14,11 @@ standard-app-packages
 aldeed:autoform
 aldeed:collection2
 email
+aldeed:tabular
+
+ongoworks:security
+alanning:roles
+aldeed:simple-schema
+cfs:standard-packages
+cfs:s3
+dbarrett:dropzonejs

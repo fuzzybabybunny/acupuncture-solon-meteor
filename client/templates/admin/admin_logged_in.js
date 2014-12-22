@@ -5,9 +5,16 @@ Template.AdminLoggedIn.rendered = function(){
 };
 
 Template.AdminLoggedIn.events({
+
 	'click #logout': function(){
 		Meteor.logout();
-	}
+	},
+
+  'click .reactive-table tr': function(event) {
+    var appointment = this;
+    Router.go('/admin/appointment/' + appointment._id);
+  }
+
 });
 
 Template.AdminLoggedIn.helpers({
@@ -20,12 +27,14 @@ Template.AdminLoggedIn.helpers({
 		    { key: 'firstName', label: 'First Name' },
 		    { key: 'lastName', label: 'Last Name' },
 		    { key: 'reason', label: 'Reason' },
-		    { key: 'date', label: 'Date' },
+		    { key: 'date', label: 'Date', fn: function(value){
+		    	return moment(value).format('MM-DD-YY, h:mm a');
+		    } },
 	    ]
 	  };
 	},
 
-  myCollection: function () {
+  appointments: function () {
     var appointments = Appointments.find().fetch();
     for(index in appointments){
     	var userId = appointments[index].patientId;

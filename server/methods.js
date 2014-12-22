@@ -1,7 +1,8 @@
 Meteor.methods({
 
-	'findUser': function(userId){
-		return Meteor.users.find(userId).fetch();
+	findUser: function(userId){
+		check(userId, String);
+		return Meteor.users.findOne(userId);
 	}
 
 

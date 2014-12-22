@@ -28,3 +28,7 @@ Meteor.publish('appointments', function() {
 Meteor.publish('appointmentSubmissions', function() {
   return AppointmentSubmissions.find();
 });
+
+Meteor.publish('users', function() {
+  return Meteor.users.find({}, {fields:{profile: true}});
+});

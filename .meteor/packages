@@ -21,3 +21,4 @@ aldeed:simple-schema
 cfs:standard-packages
 cfs:s3
 dbarrett:dropzonejs
+aslagle:reactive-table

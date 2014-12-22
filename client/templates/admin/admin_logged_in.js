@@ -1,31 +1,39 @@
+Template.AdminLoggedIn.rendered = function(){
+
+
+
+};
+
 Template.AdminLoggedIn.events({
 	'click #logout': function(){
 		Meteor.logout();
 	}
 });
 
-Template.AdminLoggedIn.rendered = function(){
+Template.AdminLoggedIn.helpers({
 
-	$('head').append('<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css">');
-	$('head').append('<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.js"></script>');
+	settings: function() {
+	  return {
+	    rowsPerPage: 10,
+	    showFilter: true,
+	    fields: [
+		    { key: 'firstName', label: 'First Name' },
+		    { key: 'lastName', label: 'Last Name' },
+		    { key: 'reason', label: 'Reason' },
+		    { key: 'date', label: 'Date' },
+	    ]
+	  };
+	},
 
-	var appointments = Appointments.find().fetch();
+  myCollection: function () {
+    var appointments = Appointments.find().fetch();
+    for(index in appointments){
+    	var userId = appointments[index].patientId;
+    	appointments[index].firstName = Meteor.users.findOne(userId).profile.firstName;
+    	appointments[index].lastName = Meteor.users.findOne(userId).profile.lastName;
+    };
+    console.log(appointments);
+    return appointments;
+  }
 
-	for(index in appointments){
-		var patient = appointments[index].patientId;
-	};
-
-
-  $('#table').html( '<table cellpadding="0" cellspacing="0" border="0" class="display" id="appointments-table"></table>' );
-  $('#appointments-table').dataTable( {
-      "data": Appointments.find().fetch(),
-      "columns": [
-          { "data": "notes" },
-          { "data": "price" },
-          { "data": "reason" },
-          { "data": "treatment" },
-          { "data": "patientId" }
-      ]
-  } ); 
-
-};
+});

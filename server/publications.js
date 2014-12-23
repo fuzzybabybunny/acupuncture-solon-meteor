@@ -32,3 +32,12 @@ Meteor.publish('appointmentSubmissions', function() {
 Meteor.publish('users', function() {
   return Meteor.users.find({}, {fields:{profile: true}});
 });
+
+Meteor.publish('userAppointment', function(appointmentId){
+  check(appointmentId, String);
+  var userId = Appointments.findOne(appointmentId).patientId;
+  return [
+    Appointments.find({_id: appointmentId}),
+    Meteor.users.find({_id: userId}, {fields: {profile: true, emails: true}})
+  ];
+});

@@ -41,7 +41,6 @@ Template.AdminMain.helpers({
     	appointments[index].firstName = Meteor.users.findOne(userId).profile.firstName;
     	appointments[index].lastName = Meteor.users.findOne(userId).profile.lastName;
     };
-    console.log(appointments);
     return appointments;
   }
 

@@ -22,7 +22,14 @@ Meteor.publish('notifications', function() {
 });
 
 Meteor.publish('appointments', function() {
-  return Appointments.find();
+  if (Roles.userIsInRole(this.userId, ['assistant','admin'])) {
+    console.log("userid: ", this.userId);
+    return Appointments.find();
+  } else {
+    console.log("userid: ", this);
+    console.log("no user");
+    return;
+  }
 });
 
 Meteor.publish('appointmentSubmissions', function() {
@@ -33,11 +40,29 @@ Meteor.publish('users', function() {
   return Meteor.users.find({}, {fields:{profile: true}});
 });
 
+Meteor.publish('patientsForDoctor', function(doctorId) {
+  return Meteor.users.find({}, {fields:{profile: true}});
+});
+
+Meteor.publish('allPatients', function() {
+  if (Roles.userIsInRole(this.userId, ['assistant','admin'])) {
+    return Meteor.users.find({roles: 'patient'}, {fields:{profile: true}});
+  } else {
+    return;
+  }
+});
+
 Meteor.publish('userAppointment', function(appointmentId){
   check(appointmentId, String);
-  var userId = Appointments.findOne(appointmentId).patientId;
-  return [
-    Appointments.find({_id: appointmentId}),
-    Meteor.users.find({_id: userId}, {fields: {profile: true, emails: true}})
-  ];
+  if (Appointments.findOne(appointmentId)){
+    var userId = Appointments.findOne(appointmentId).patientId;
+    return [
+      Appointments.find({_id: appointmentId}),
+      Meteor.users.find({_id: userId}, {fields: {profile: true, emails: true}})
+    ];
+  } else {
+    console.log("data not found");
+    return [];
+  }
+
 });

@@ -1,10 +1,10 @@
-Template.AdminLoggedIn.rendered = function(){
+Template.AdminMain.rendered = function(){
 
 
 
 };
 
-Template.AdminLoggedIn.events({
+Template.AdminMain.events({
 
 	'click #logout': function(){
 		Meteor.logout();
@@ -17,7 +17,7 @@ Template.AdminLoggedIn.events({
 
 });
 
-Template.AdminLoggedIn.helpers({
+Template.AdminMain.helpers({
 
 	settings: function() {
 	  return {

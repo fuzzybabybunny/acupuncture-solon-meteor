@@ -1,14 +1,14 @@
 Template.AppointmentShow.rendered = function(){
 
-	var patientId = this.data.patientId;
-	var patient = Meteor.users.findOne(patientId);
+	var patient = this.data.patient;
+	var appointment = this.data.appointment;
 
 };
 
 Template.AppointmentShow.helpers({
 
-	'patient': function(){
-		return Meteor.users.findOne(this.patientId);
-	}
+	// 'patient': function(){
+	// 	return Meteor.users.findOne(this.patientId);
+	// }
 
 });

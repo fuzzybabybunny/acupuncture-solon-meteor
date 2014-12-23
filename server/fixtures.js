@@ -1,17 +1,30 @@
-var patient1Id, patient2Id, dictor1Id;
+var adminId, patient1Id, patient2Id, dictor1Id;
 
 if (Meteor.users.find().count() === 0) {
 
-  Accounts.createUser({
+  adminId = Accounts.createUser({
     username: 'admin',
     email: 'none@none.com',
     password: '12345678',
     profile: {
-        firstName: 'Admin',
-        lastName: 'Account',
-        role: 'admin'
+      firstName: 'Admin',
+      lastName: 'Account'
     }
   });
+
+  Roles.addUsersToRoles(adminId, ['admin']);
+
+  assistantId = Accounts.createUser({
+    username: 'assistant',
+    email: 'assistant@none.com',
+    password: '12345678',
+    profile: {
+      firstName: 'Executive',
+      lastName: 'Assistant'
+    }
+  });
+
+  Roles.addUsersToRoles(assistantId, ['assistant']);
 
   dictor1Id = Accounts.createUser({
     username: 'doctor',
@@ -23,6 +36,8 @@ if (Meteor.users.find().count() === 0) {
         role: 'doctor'
     }
   });
+
+  Roles.addUsersToRoles(dictor1Id, ['doctor']);
 
   patient1Id = Accounts.createUser({
     username: 'johnsmith',
@@ -46,10 +61,11 @@ if (Meteor.users.find().count() === 0) {
         emergencyName: 'Tom Smith',
         emergencyPhone: '440-222-2221',
         referralName: 'Dr. Karen Smith',
-        referralPhone: '440-111-1111',
-        role: 'patient'
+        referralPhone: '440-111-1111'
     }
   });
+
+  Roles.addUsersToRoles(patient1Id, ['patient']);
 
   patient2Id = Accounts.createUser({
     username: 'janesmith',
@@ -73,10 +89,11 @@ if (Meteor.users.find().count() === 0) {
         emergencyName: 'Tom Smith',
         emergencyPhone: '440-222-2221',
         referralName: 'Dr. Karen Smith',
-        referralPhone: '440-111-1111',
-        role: 'patient'
+        referralPhone: '440-111-1111'
     }
   });
+
+  Roles.addUsersToRoles(patient2Id, ['patient']);
 
 };
 

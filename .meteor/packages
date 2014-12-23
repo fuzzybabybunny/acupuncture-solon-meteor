@@ -15,10 +15,10 @@ aldeed:autoform
 aldeed:collection2
 email
 
-ongoworks:security
 alanning:roles
 aldeed:simple-schema
 cfs:standard-packages
 cfs:s3
 dbarrett:dropzonejs
 aslagle:reactive-table
+ongoworks:security

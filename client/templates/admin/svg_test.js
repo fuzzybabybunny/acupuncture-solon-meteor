@@ -19,14 +19,12 @@ Template.SVGTest.rendered = function(){
 	    // Set it's x and y
 	    use.setAttribute("x", markerPositions[i][0]);
 	    use.setAttribute("y", markerPositions[i][1]);
-	    debugger
 	    use.onclick = function(){
-	    	console.log("clicked!");
+	    	alert("clicked!");
 	    };
 
 	    // Add it to the "markers" group
 	    document.getElementById("markers").appendChild(use);
-	    debugger
 	}
 
 };

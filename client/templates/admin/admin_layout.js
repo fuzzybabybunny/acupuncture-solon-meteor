@@ -1,4 +1,4 @@
-Template.AdminLayout.rendered = function(){
+// Template.AdminLayout.rendered = function(){
 
 
-};
+// };

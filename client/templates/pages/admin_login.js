@@ -6,7 +6,9 @@ Template.AdminLogin.rendered = function(){
 		Meteor.loginWithPassword(login.username, login.password, function(error){
 			if(error){
 				Errors.insert(error);
-			};
+			} else {
+				Router.go('/admin');
+			}
 		});
 	});
 

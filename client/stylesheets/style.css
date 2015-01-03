@@ -7,6 +7,21 @@ path {
     stroke-linecap:round;
 }
 
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.svg-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 .grid-block, .main, .post, .comments li, .comment-form {
   background: #fff;

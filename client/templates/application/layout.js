@@ -1,6 +1,6 @@
 Template.layout.rendered = function(){
 	// console.log("body contents on layout.rendered: ", $('body')[0]);
-
+	$('head').append('<script src="/assets/javascript/svg-pan-zoom.min.js"></script>');
 };
 
 Template.loading.destroyed = function(){
@@ -27,6 +27,7 @@ Template.index.rendered = function(){
 
 	$('head').append('<script src="/assets/startup/common-files/js/page-transitions.js"></script>');
   $('head').append('<script src="/assets/startup/common-files/js/startup-kit.js"></script>');
+
 	
 	
 };

@@ -1,5 +1,23 @@
 Template.SVGTest.rendered = function(){
 
+	$('#arm').load(function(){
+		var panZoomArm = svgPanZoom('#arm');
+	});
+
+	var arm = document.getElementById("arm");
+	arm.addEventListener('load', function(){
+		var panZoomArm = svgPanZoom('#arm');
+	});
+
+	var map = document.getElementById("map");
+	arm.addEventListener('load', function(){
+		var panZoomArm = svgPanZoom('#map');
+	});
+
+	// $('#map').load(function(){
+	// 	var panZoomMap = svgPanZoom('#map');
+	// });
+
 	var colors = "0f0 0ff f60 f0f 00f f00".split(' '), i=0;
 
   $('path').click(function(){
@@ -25,6 +43,7 @@ Template.SVGTest.rendered = function(){
 
 	    // Add it to the "markers" group
 	    document.getElementById("markers").appendChild(use);
+	    
 	}
 
 };

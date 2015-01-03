@@ -1,0 +1,14 @@
+<img src="acupuncture-points.jpg" width="7600" height="5000" border="0" usemap="#map" />
+
+<map name="map">
+<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+<!-- #$-:Please do not edit lines starting with "#$" -->
+<!-- #$VERSION:2.3 -->
+<!-- #$AUTHOR:Victor -->
+<area shape="circle" coords="323,2661,19" href="#" />
+<area shape="circle" coords="367,2691,19" href="#" />
+<area shape="circle" coords="434,2680,18" href="#" />
+<area shape="circle" coords="6549,478,17" href="#" />
+<area shape="circle" coords="3907,4582,22" href="#" />
+</map>

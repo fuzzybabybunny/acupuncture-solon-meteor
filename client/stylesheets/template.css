@@ -686,7 +686,7 @@ a,
 
 .navbar-color,
 .custom-collapse {
-	background: #1b1212;
+	background: hsla(0,20%,8.8%, 1);
 	box-shadow: 0 0 4px rgba(0, 0, 0, .2);
 	padding: 10px 0;
 }
@@ -748,7 +748,7 @@ a,
 /* ---------------------------------------------- */
 
 #about-header {
-	background: url(/assets/images/bg1.jpg) no-repeat center fixed;
+	background: url(/assets/images/acu4.jpg) no-repeat center fixed;
 	-webkit-background-size: cover;
 			background-size: cover;
 }
@@ -776,7 +776,7 @@ a,
 /* ---------------------------------------------- */
 
 #portfolio-header {
-	background: url(/assets/images/bg2.jpg) no-repeat center fixed;
+	background: url(/assets/images/acu21.jpg) no-repeat center fixed;
 	-webkit-background-size: cover;
 			background-size: cover;
 }
@@ -856,7 +856,7 @@ a,
 /* ---------------------------------------------- */
 
 #team-header {
-	background: url(/assets/images/bg3.jpg) no-repeat center fixed;
+	background: url(/assets/images/acu28.jpg) no-repeat center fixed;
 	-webkit-background-size: cover;
 			background-size: cover;
 }
@@ -886,7 +886,7 @@ a,
 }
 
 #contact-header {
-	background: url(/assets/images/bg1.jpg) no-repeat center fixed;
+	background: url(/assets/images/acu43.jpg) no-repeat center fixed;
 	-webkit-background-size: cover;
 			background-size: cover;
 }

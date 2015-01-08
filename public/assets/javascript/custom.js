@@ -21,7 +21,7 @@
 			var anchor = $(this);
 			if ($(anchor.attr('href')) !== '#'){
 				$('html, body').stop().animate({
-					scrollTop: $(anchor.attr('href')).offset().top
+					scrollTop: $(anchor.attr('href')).offset().top - 60
 				}, 1000);
 				e.preventDefault();
 			};
@@ -46,10 +46,12 @@
 		/* ---------------------------------------------- */
 
 		$('#intro').backstretch([
-			'assets/images/bg1.jpg',
-			'assets/images/bg2.jpg',
-			'assets/images/bg3.jpg'
-		], {duration: 3000, fade: 750});
+			'assets/images/acu9.jpg',
+			'assets/images/acu42.jpg',
+			'assets/images/acu48.jpg',
+			'assets/images/acu2.jpg',
+			'assets/images/acu12.jpg',
+		], {duration: 2250, fade: 750});
 
 		/* ---------------------------------------------- /*
 		 * Navbar
@@ -107,7 +109,7 @@
 			$('#skill .custom-knob').each(function() {
 				counter = $(this).attr('data-count-to'),
 				$(this).animate({ value: counter }, {
-					duration: 1500,
+					duration: 3000,
 					easing:'swing',
 					progress: function() {
 						$(this).val(Math.ceil(this.value)).trigger('change');

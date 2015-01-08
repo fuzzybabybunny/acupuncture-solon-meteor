@@ -4,12 +4,14 @@
 	 * Preloader
 	/* ---------------------------------------------- */
 
-	$(window).load(function() {
+
 		$('#status').fadeOut();
 		$('#preloader').delay(350).fadeOut('slow');
-	});
+
 
 	$(document).ready(function() {
+
+		console.log('document ready! ', document.getElementsByTagName('*').length);
 
 		/* ---------------------------------------------- /*
 		 * Animated scrolling / Scroll Up
@@ -17,10 +19,12 @@
 
 		$('a[href*=#]').bind("click", function(e){
 			var anchor = $(this);
-			$('html, body').stop().animate({
-				scrollTop: $(anchor.attr('href')).offset().top
-			}, 1000);
-			e.preventDefault();
+			if ($(anchor.attr('href')) !== '#'){
+				$('html, body').stop().animate({
+					scrollTop: $(anchor.attr('href')).offset().top
+				}, 1000);
+				e.preventDefault();
+			};
 		});
 
 		$(window).scroll(function() {
@@ -243,35 +247,44 @@
 		 * Google Map
 		/* ---------------------------------------------- */
 
-		// map = new GMaps({
-		// 	el: '#map',
-		// 	lat: 27.998653,
-		// 	lng: -80.638855,
-		// 	zoom: 16,
-		// 	scrollwheel: false,
-		// 	zoomControl : false,
-		// 	panControl : false,
-		// 	streetViewControl : false,
-		// 	mapTypeControl: false,
-		// 	overviewMapControl: false,
-		// 	styles: [{"featureType":"all","stylers":[{"saturation":-100},{"gamma":0.5}]}]
-		// });
+		map = new GMaps({
+			el: '#map',
+			lat: 48.3213955845508,
+			lng: -81.44008399999998,
+			zoom: 16,
+			scrollwheel: true,
+			zoomControl : true,
+			panControl : true,
+			streetViewControl : true,
+			mapTypeControl: true,
+			overviewMapControl: true,
+			// styles: [{"featureType":"all","stylers":[{"saturation":-50},{"gamma":0.5}]}]
+		});
 
-		// var image = new google.maps.MarkerImage('assets/images/map-icon.png',
-		// 	new google.maps.Size(60, 60),
-		// 	new google.maps.Point(0, 0),
-		// 	new google.maps.Point(26, 30)
-		// );
-
-		// map.addMarker({
-		// 	lat: 27.998653,
-		// 	lng: -80.638855,
-		// 	icon: image,
-		// 	title: 'Elegant',
-		// 	infoWindow: {
-		// 		content: '<p><strong>Elegant</strong><br/> We are here</p>'
-		// 	}
-		// });
+		GMaps.geocode({
+		  address: '33595 Bainbridge Road #101, Solon, OH 44139',
+		  callback: function(results, status) {
+		    if (status == 'OK') {
+					var image = new google.maps.MarkerImage('assets/images/map-icon.png',
+						new google.maps.Size(60, 60),
+						new google.maps.Point(0, 0),
+						new google.maps.Point(26, 30)
+					);
+		      var latlng = results[0].geometry.location;
+		      map.setCenter(latlng.lat(), latlng.lng());
+		      
+		      map.addMarker({
+		        lat: latlng.lat(),
+		        lng: latlng.lng(),
+						icon: image,
+						title: 'Acupuncture Clinic of Solon',
+						infoWindow: {
+							content: 'Acupuncture Clinic of Solon'
+						}
+		      });
+		    }
+		  }
+		});
 
 	});
 

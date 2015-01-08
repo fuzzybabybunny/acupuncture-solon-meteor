@@ -1,15 +1,8 @@
 Template.layout.rendered = function(){
 
-	var scripts = '<!-- Javascript files -->\
-	<!-- Custom scripts -->\
-	<script src="/assets/javascript/custom.js"></script>';
-
-	$('tail').append(scripts);
+	console.log( 'layout.rendered and the number of DOM nodes: ', document.getElementsByTagName('*').length );
 };
 
-Template.loading.destroyed = function(){
-
-};
 
 // This needs to be here because page-transitions and startup-kit need jumbotron to be rendered first.
 // Template.jumbotron.rendered = function(){

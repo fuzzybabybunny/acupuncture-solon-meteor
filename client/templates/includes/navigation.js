@@ -13,15 +13,4 @@ Template.Navigation.helpers({
 
 Template.Navigation.rendered = function(){
 
-	$('a').on('click', function(){
-	  if($(this).attr('href').indexOf('#')>-1) {
-	    event.preventDefault();
-	    var id = $(this).attr("href");
-	    var top = $(id).offset().top;
-	    $("html, body").animate({
-	      scrollTop: top
-	    }, 500); // you can set any time here
-	  }
-	});
-
-}
+};

@@ -37,6 +37,18 @@ h1, h2, h3, h4, h5, h6 {
 	color: #222;
 }
 
+@media screen and (max-width: 768px) {
+    #main-title {
+        font-size: 275%;
+    }
+}
+ 
+@media screen and (max-width: 568px) {
+    #main-title {
+        font-size: 110%;
+    }
+}
+
 h1 {
 	font-size: 64px;
 	font-weight: 700;
@@ -869,6 +881,10 @@ a,
  * Contact
 /* ---------------------------------------------- */
 
+#contact {
+	padding-top: 0px;
+}
+
 #contact-header {
 	background: url(/assets/images/bg1.jpg) no-repeat center fixed;
 	-webkit-background-size: cover;
@@ -878,6 +894,7 @@ a,
 #contact-data {
 	background: #ebeff0;
 	text-align: center;
+	padding-bottom: 0px;
 }
 
 #map-section {

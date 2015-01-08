@@ -51,7 +51,7 @@
 			'assets/images/acu48.jpg',
 			'assets/images/acu2.jpg',
 			'assets/images/acu12.jpg',
-		], {duration: 2250, fade: 750});
+		], {duration: 2600, fade: 750});
 
 		/* ---------------------------------------------- /*
 		 * Navbar
@@ -156,7 +156,7 @@
 		$(".rotate").textrotator({
 			animation: "dissolve",
 			separator: "|",
-			speed: 3000
+			speed: 3500
 		});
 
 		/* ---------------------------------------------- /*

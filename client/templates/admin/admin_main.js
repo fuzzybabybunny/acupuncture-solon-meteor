@@ -6,10 +6,6 @@ Template.AdminMain.rendered = function(){
 
 Template.AdminMain.events({
 
-	'click #logout': function(){
-		Meteor.logout();
-	},
-
   'click .reactive-table tr': function(event) {
     var appointment = this;
     Router.go('/admin/appointment/' + appointment._id);

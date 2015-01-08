@@ -1,4 +1,4 @@
-Template.layout.rendered = function(){
+Template.Layout.rendered = function(){
 
 	console.log( 'layout.rendered and the number of DOM nodes: ', document.getElementsByTagName('*').length );
 };

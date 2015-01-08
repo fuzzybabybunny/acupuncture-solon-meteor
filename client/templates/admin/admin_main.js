@@ -1,7 +1,6 @@
 Template.AdminMain.rendered = function(){
 
 
-
 };
 
 Template.AdminMain.events({

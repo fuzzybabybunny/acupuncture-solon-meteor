@@ -34,11 +34,11 @@ var faqContents = [
   }
 ];
 
-Template.faq.rendered = function(){
+Template.Faq.rendered = function(){
 
 };
 
-Template.faq.helpers({
+Template.Faq.helpers({
 	faqContents: function(){
 		return faqContents;
 	}

@@ -1,33 +1,63 @@
-<template name="faq">
-	<section id="faq" class="content-20 v-center bg-midnight-blue">
-		<div>
+<template name="Faq">
+
+	<!-- About section start -->
+
+	<section id="faq-header" class="section-header">
+
+		<div class="color-overlay">
+
 			<div class="container">
+
 				<div class="row">
-					<div class="col-sm-8 col-sm-offset-2">
-						<h3>Frequently Asked Questions</h3>
+
+					<div class="col-sm-12 wow bounceInDown">
+						<h2>Frequently Asked Questions</h2>
 					</div>
+
 				</div>
-				<div class="row">
-					<div class="col-sm-8 col-sm-offset-2">
-						<div class="panel-group faq" id="accordion">
-							{{#each faqContents}}
-							<div class="panel panel-default">
-							  <div class="panel-heading">
-							    <h4 class="panel-title">
-							      <a class="question" data-toggle="collapse" data-parent="#accordion" href="#collapse{{number}}">{{question}}</a>
-							    </h4>
-							  </div>
-							  <div id="collapse{{number}}" class="panel-collapse collapse">
-							    <div class="panel-body answer">
-							      {{{answer}}}
-							    </div>
-							  </div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<section id="faq" class="section">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-xs-12 wow bounceInLeft">
+
+					<div class="row">
+						<div class="col-sm-8 col-sm-offset-2">
+							<div class="panel-group faq" id="accordion">
+								{{#each faqContents}}
+								<div class="panel panel-default">
+								  <div class="panel-heading">
+								    <h4 class="panel-title">
+								      <a class="question" data-toggle="collapse" data-parent="#accordion" href="#collapse{{number}}">{{question}}</a>
+								    </h4>
+								  </div>
+								  <div id="collapse{{number}}" class="panel-collapse collapse">
+								    <div class="panel-body answer">
+								      {{{answer}}}
+								    </div>
+								  </div>
+								</div>
+								{{/each}}
 							</div>
-							{{/each}}
-						</div>
-	  			</div>
-	  		</div>
-	  	</div>
-  	</div>
-  </section>
+		  			</div>
+		  		</div>
+				</div><!-- .com-md-6 -->
+
+			</div><!-- .row -->
+
+		</div><!-- .container -->
+
+	</section>
+
+	<!-- About section start -->
+
 </template>

@@ -7,7 +7,6 @@ var mandrill = Npm.require('mandrill-api/mandrill');
 
 // create a new instance of the Mandrill class with your API key
 var m = new mandrill.Mandrill('uwCFgPa5BHWpmkqfN9HF3Q');
-console.log(m);
 
 // create a variable for the API call parameters
 var params = {

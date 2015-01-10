@@ -32,22 +32,12 @@
 
 					<div class="row">
 						<div class="col-sm-8 col-sm-offset-2">
-							<div class="panel-group faq" id="accordion">
+							<ul>
 								{{#each faqContents}}
-								<div class="panel panel-default">
-								  <div class="panel-heading">
-								    <h4 class="panel-title">
-								      <a class="question" data-toggle="collapse" data-parent="#accordion" href="#collapse{{number}}">{{question}}</a>
-								    </h4>
-								  </div>
-								  <div id="collapse{{number}}" class="panel-collapse collapse">
-								    <div class="panel-body answer">
-								      {{{answer}}}
-								    </div>
-								  </div>
-								</div>
+								<h3>{{question}}</h3>
+								<p>{{{answer}}}</p>
 								{{/each}}
-							</div>
+							</ul>
 		  			</div>
 		  		</div>
 				</div><!-- .com-md-6 -->

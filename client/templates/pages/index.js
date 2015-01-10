@@ -16,6 +16,10 @@ Template.index.events({
 
 	'click #ZPModalLink': function(){
 		$('#ZPModal').modal('toggle');
+	},
+
+	'click .portfolio-item': function(){
+		$('#CaseStudyModal').modal('toggle');
 	}
 
 })

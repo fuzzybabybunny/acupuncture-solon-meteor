@@ -45,13 +45,32 @@
 		 * Background image
 		/* ---------------------------------------------- */
 
-		$('#intro').backstretch([
-			'assets/images/acu9.jpg',
-			'assets/images/acu42.jpg',
-			'assets/images/acu48.jpg',
-			'assets/images/acu2.jpg',
-			'assets/images/acu12.jpg',
-		], {duration: 2600, fade: 750});
+		var items = [
+		  { img: 'assets/images/acu9.jpg', caption: "All-Natural"},
+		  { img: 'assets/images/acu42.jpg', caption: "Herbal Medicine"},
+		  { img: 'assets/images/acu48.jpg', caption: "Pain Removal"},
+		  { img: 'assets/images/acu2.jpg', caption: "Fertility"},
+		  { img: 'assets/images/acu50.jpg', caption: "Weight Loss"}
+		];
+
+		var images = $.map(items, function(i) { return i.img; });
+
+		$('#intro').backstretch(images, {duration: 2600, fade: 750});
+
+		$(window).on("backstretch.show", function(e, instance) {
+		  var newCaption = items[instance.index].caption;
+		  $(".caption").text( newCaption );
+		});
+
+		/* ---------------------------------------------- /*
+		 * Rotate
+		/* ---------------------------------------------- */
+
+		$(".rotate").textrotator({
+			animation: "dissolve",
+			separator: "|",
+			speed: 3500
+		});
 
 		/* ---------------------------------------------- /*
 		 * Navbar
@@ -149,33 +168,24 @@
 			autoPlay: 5000
 		});
 
-		/* ---------------------------------------------- /*
-		 * Rotate
-		/* ---------------------------------------------- */
-
-		$(".rotate").textrotator({
-			animation: "dissolve",
-			separator: "|",
-			speed: 3500
-		});
 
 		/* ---------------------------------------------- /*
 		 * Portfolio pop up
 		/* ---------------------------------------------- */
 
-		$('#portfolio').magnificPopup({
-			delegate: 'a.pop-up',
-			type: 'image',
-			gallery: {
-				enabled: true,
-				navigateByImgClick: true,
-				preload: [0,1]
-			},
-			image: {
-				titleSrc: 'title',
-				tError: 'The image could not be loaded.',
-			}
-		});
+		// $('#portfolio').magnificPopup({
+		// 	delegate: 'a.pop-up',
+		// 	type: 'image',
+		// 	gallery: {
+		// 		enabled: true,
+		// 		navigateByImgClick: true,
+		// 		preload: [0,1]
+		// 	},
+		// 	image: {
+		// 		titleSrc: 'title',
+		// 		tError: 'The image could not be loaded.',
+		// 	}
+		// });
 
 		$('.video-pop-up').magnificPopup({
 			type: 'iframe',

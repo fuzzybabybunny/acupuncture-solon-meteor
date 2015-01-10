@@ -43,3 +43,7 @@ Template.Faq.helpers({
 		return faqContents;
 	}
 });
+
+Template.Faq.events({
+
+});

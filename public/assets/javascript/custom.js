@@ -210,50 +210,50 @@
 		 * Contact form ajax
 		/* ---------------------------------------------- */
 
-		$("#contact-form").submit(function(e) {
+		// $("#contact-form").submit(function(e) {
 
-			e.preventDefault();
+		// 	e.preventDefault();
 
-			var c_name = $("#c_name").val();
-			var c_email = $("#c_email").val();
-			var c_message = $("#c_message ").val();
-			var responseMessage = $('#contact-form .ajax-response');
+		// 	var c_name = $("#c_name").val();
+		// 	var c_email = $("#c_email").val();
+		// 	var c_message = $("#c_message ").val();
+		// 	var responseMessage = $('#contact-form .ajax-response');
 
-			if (( c_name== "" || c_email == "" || c_message == "") || (!isValidEmailAddress(c_email) )) {
-				responseMessage.fadeIn(500);
-				responseMessage.html('<i class="fa fa-warning"></i> Check all fields.');
-			}
+		// 	if (( c_name== "" || c_email == "" || c_message == "") || (!isValidEmailAddress(c_email) )) {
+		// 		responseMessage.fadeIn(500);
+		// 		responseMessage.html('<i class="fa fa-warning"></i> Check all fields.');
+		// 	}
 
-			else {
-				$.ajax({
-					type: "POST",
-					url: "assets/php/contactForm.php",
-					dataType: 'json',
-					data: {
-						c_email: c_email,
-						c_name: c_name,
-						c_message: c_message
-					},
-					beforeSend: function(result) {
-						$('#contact-form button').empty();
-						$('#contact-form button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
-					},
-					success: function(result) {
-						if(result.sendstatus == 1) {
-							$('#contact-form .ajax-hidden').fadeOut(500);
-							responseMessage.html(result.message).fadeIn(500);
-						} else {
-							$('#contact-form button').empty();
-							$('#contact-form button').append('<i class="fa fa-retweet"></i> Try again.');
-							responseMessage.html(result.message).fadeIn(1000);
-						}
-					}
-				});
-			}
+		// 	else {
+		// 		$.ajax({
+		// 			type: "POST",
+		// 			url: "assets/php/contactForm.php",
+		// 			dataType: 'json',
+		// 			data: {
+		// 				c_email: c_email,
+		// 				c_name: c_name,
+		// 				c_message: c_message
+		// 			},
+		// 			beforeSend: function(result) {
+		// 				$('#contact-form button').empty();
+		// 				$('#contact-form button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
+		// 			},
+		// 			success: function(result) {
+		// 				if(result.sendstatus == 1) {
+		// 					$('#contact-form .ajax-hidden').fadeOut(500);
+		// 					responseMessage.html(result.message).fadeIn(500);
+		// 				} else {
+		// 					$('#contact-form button').empty();
+		// 					$('#contact-form button').append('<i class="fa fa-retweet"></i> Try again.');
+		// 					responseMessage.html(result.message).fadeIn(1000);
+		// 				}
+		// 			}
+		// 		});
+		// 	}
 
-			return false;
+		// 	return false;
 
-		});
+		// });
 
 		/* ---------------------------------------------- /*
 		 * Google Map

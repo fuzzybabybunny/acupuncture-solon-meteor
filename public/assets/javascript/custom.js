@@ -11,7 +11,7 @@
 
 	$(document).ready(function() {
 
-		console.log('document ready! ', document.getElementsByTagName('*').length);
+		// console.log('document ready! ', document.getElementsByTagName('*').length);
 
 		/* ---------------------------------------------- /*
 		 * Animated scrolling / Scroll Up

@@ -5,7 +5,7 @@ Template.index.rendered = function(){
 	<script src="/assets/javascript/custom.js"></script>';
 
 	$('tail').append(scripts);
-  console.log('yield rendered and the number of DOM nodes: ', document.getElementsByTagName('*').length );
+  // console.log('yield rendered and the number of DOM nodes: ', document.getElementsByTagName('*').length );
 };
 
 Template.index.events({

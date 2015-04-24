@@ -1,7 +1,7 @@
-Template.Layout.rendered = function(){
+// Template.Layout.rendered = function(){
 
-	console.log( 'layout.rendered and the number of DOM nodes: ', document.getElementsByTagName('*').length );
-};
+// 	console.log( 'layout.rendered and the number of DOM nodes: ', document.getElementsByTagName('*').length );
+// };
 
 
 // This needs to be here because page-transitions and startup-kit need jumbotron to be rendered first.

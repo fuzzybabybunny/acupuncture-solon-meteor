@@ -40,7 +40,7 @@
 						<h4>Email</h4>
 						<div class="text">
 							<address>
-								<a href="mailto:#">admin@acupuncturecleveland.com</a><br/>
+								<a href="mailto:admin@acupuncturecleveland.com">admin@acupuncturecleveland.com</a><br/>
 							</address>
 						</div>
 					</div>
@@ -54,7 +54,7 @@
 						<h4>Phone</h4>
 						<div class="text">
 							<address>
-								<abbr title="Phone">P:</abbr> +1 (440) 725-4931<br/>
+								<a href="tel:4407254931">+1 (440) 725-4931</a><br/>
 							</address>
 						</div>
 					</div>
@@ -68,9 +68,11 @@
 						<h4>Address</h4>
 						<div class="text">
 							<address>
-							  The Acupuncture Clinic of Solon<br/>
-								33595 Bainbridge Road, Suite 101<br/>
-								Solon, Ohio 44139
+								<a href="https://www.google.com/maps/place/Acupuncture+Clinic+of+Solon/@41.389604,-81.440084,15z/data=!4m2!3m1!1s0x0:0x2b4c1be6b248f1e4?sa=X&ei=wAE6VamOD46zogSEqICQDg&ved=0CIgBEPwSMAo" target="_blank">
+								  The Acupuncture Clinic of Solon<br/>
+									33595 Bainbridge Road, Suite 101<br/>
+									Solon, Ohio 44139
+								</a>
 							</address>
 						</div>
 					</div>
@@ -146,14 +148,16 @@
 
 							<div class="form-group">
 								<label class="sr-only" for="c_subject">Subject</label>
-								<input type="text" id="c_subject" class="form-control" name="c_subject" placeholder="Email Subject">
+								<input type="text" id="c_subject" class="form-control" name="c_subject" placeholder="Subject">
 							</div>
 
 							<div class="form-group">
-								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Your Message"></textarea>
+							  <label class="sr-only" for="c_message">Message</label>
+								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Message"></textarea>
 							</div>
 
 							<div class="form-group">
+							  <label class="sr-only" for="c_referral">How did you find us?</label>
 								<select class="form-control" name="c_referral" id="referral_list">
 								  <option>Where did you find us?</option>
 								  <option>Google</option>
@@ -165,10 +169,12 @@
 							</div>
 
 							<div class="form-group">
+								<label class="sr-only" for="c_doctor_name">Doctor's Name</label>
 								<input type="text" class="form-control hidden_input" name="c_doctor_name" placeholder="Please Enter Doctor's Name">
 							</div>
 
 							<div class="form-group">
+								<label class="sr-only" for="c_other_referrer">How did you find us?</label>
 								<input type="text" class="form-control hidden_input" name="c_other_referrer" placeholder="Please Specify">
 							</div>
 

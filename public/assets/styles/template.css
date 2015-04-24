@@ -550,6 +550,11 @@ a,
 	padding: 120px 0;
 }
 
+#team {
+	position: relative;
+	padding: 70px 0;
+}
+
 .color-overlay {
 	background: rgba(0, 0, 0, 0.5);
 	padding: 60px 0;

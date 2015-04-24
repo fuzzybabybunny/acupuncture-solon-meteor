@@ -5,6 +5,8 @@ Template.Contact.events({
 		$('#contact-form button').empty();
 		$('#contact-form button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
 		var formContents = $('form#contact-form').serializeObject();
+		formContents.c_message = formContents.c_message.replace(/\r?\n/g, '<br />');
+		// console.log(formContents);
 		Meteor.call('sendContactEmail', formContents, function(error, result){
 			if(!error){
 				$('#contact-form')[0].reset();

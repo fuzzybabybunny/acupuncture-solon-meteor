@@ -19,8 +19,7 @@
 
 		$('a[href*=#]').bind("click", function(e){
 			var anchor = $(this);
-			console.log(anchor);
-			if (anchor[0].hash !== '#'){
+			if (anchor[0].hash !== '#' && anchor[0].hash !== ''){
 				$('html, body').stop().animate({
 					scrollTop: $(anchor[0].hash).offset().top - 60
 				}, 1000);

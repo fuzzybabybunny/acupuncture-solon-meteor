@@ -6,7 +6,7 @@ var faqContents = [
   }, {
   	number: "Two",
   	question: "What ailments do you treat?",
-  	answer: "<ul> <li>Gastrointestinal Disorders such as food allergies, peptic ulcers, constipation, chronic diarrhea, indigestion, gastrointestinal weaknesses, anorexia, and gastritis.</li> <li>Urogenital Disorders including stress incontinence, urinary tract infections and sexual dysfunction.</li> <li>Gynecological Disorders such as irregular, heavy or painful menstruation, infertility o women and men, and premenstrual disorder.</li> <li>Respiratory Disorders such as emphysema, sinusitis, asthma, allergies and bronchitis.</li> <li>Disorders of the Bones, Muscles, Joints, and Nervous System such as arthritis, neuralgia, migraine headaches, insomnia, dizziness and low back, neck and shoulder pain.</li> <li>Circulatory Disorders such as hypertension, angina pectoris, arteriosclerosis, and anemia.</li> <li>Emotional and Psychological Disorders including depression and anxiety.</li> <li>Addictions such as alcohol, nicotine, and drugs.</li> <li>Many Eye, Ear, Nose, and Throat Disorders.</li> <li>Supportive Therapy for many other chronic and painful debilitating disorders.</li> <li>Allergies <br> </li> <li>Fibromyalgia <br> </li> <li>Headache/Migraine <br> </li> <li>Shoulder, neck, back, knee &amp; heel pain <br> </li> <li>Tennis elbow <br> </li> <li>T.M.J. <br> </li> <li>Carpal tunnel</li> <li>Depression</li> <li>Anxiety <br> </li> <li>Asthma</li> <li>Menopause syndrome <br> </li> <li>Menstrual cramps <br> </li> <li>Menorrhagia <br> </li> <li>Bladder leakage</li> <li>Chronic fatigue</li> <li>Facial paralysis (the sooner you treat it, the better)</li> <li>Stroke rehabilitation </li> <li>Side effects associated with chemotherapy</li> <li>Irritable bowel movements/ Diarrhea/Constipation</li> <li>Addictions</li> <li>Shingles</li></ul>"
+  	answer: "<ul id='ailments'> <li>Gastrointestinal Disorders such as food allergies, peptic ulcers, constipation, chronic diarrhea, indigestion, gastrointestinal weaknesses, anorexia, and gastritis.</li> <li>Urogenital Disorders including stress incontinence, urinary tract infections and sexual dysfunction.</li> <li>Gynecological Disorders such as irregular, heavy or painful menstruation, infertility o women and men, and premenstrual disorder.</li> <li>Respiratory Disorders such as emphysema, sinusitis, asthma, allergies and bronchitis.</li> <li>Disorders of the Bones, Muscles, Joints, and Nervous System such as arthritis, neuralgia, migraine headaches, insomnia, dizziness and low back, neck and shoulder pain.</li> <li>Circulatory Disorders such as hypertension, angina pectoris, arteriosclerosis, and anemia.</li> <li>Emotional and Psychological Disorders including depression and anxiety.</li> <li>Addictions such as alcohol, nicotine, and drugs.</li> <li>Eye, Ear, Nose, and Throat Disorders.</li> <li>Supportive Therapy for many other chronic and painful debilitating disorders.</li> <li>Allergies <br> </li> <li>Fibromyalgia <br> </li> <li>Headache/Migraine <br> </li> <li>Shoulder, neck, back, knee &amp; heel pain <br> </li> <li>Tennis elbow <br> </li> <li>Temporomandibular Joint Disorders <br> </li> <li>Carpal tunnel</li> <li>Depression</li> <li>Anxiety <br> </li> <li>Asthma</li> <li>Menopause syndrome <br> </li> <li>Menstrual cramps <br> </li> <li>Menorrhagia <br> </li> <li>Bladder leakage</li> <li>Chronic fatigue</li> <li>Facial paralysis (the sooner you treat it, the better)</li> <li>Stroke rehabilitation </li> <li>Chemotherapy side effects</li> <li>Irritable bowel movements/ Diarrhea/Constipation</li> <li>Shingles</li></ul>"
   }, {
   	number: "Three",
     question: "What can I expect if treated?",
@@ -34,15 +34,20 @@ var faqContents = [
   }
 ];
 
-Template.Faq.rendered = function(){
-
-};
-
 Template.Faq.helpers({
-	faqContents: function(){
-		return faqContents;
-	}
+  faqContents: function(){
+    return faqContents;
+  }
 });
+
+Template.Faq.rendered = function(){
+  var mylist = $('#ailments');
+  var listitems = mylist.children('li').get();
+  listitems.sort(function(a, b) {
+     return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+  })
+  $.each(listitems, function(idx, itm) { mylist.append(itm); });
+};
 
 Template.Faq.events({
 

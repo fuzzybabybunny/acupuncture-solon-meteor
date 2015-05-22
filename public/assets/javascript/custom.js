@@ -19,9 +19,10 @@
 
 		$('a[href*=#]').bind("click", function(e){
 			var anchor = $(this);
-			if ($(anchor.attr('href')) !== '#'){
+			console.log(anchor);
+			if (anchor[0].hash !== '#'){
 				$('html, body').stop().animate({
-					scrollTop: $(anchor.attr('href')).offset().top - 60
+					scrollTop: $(anchor[0].hash).offset().top - 60
 				}, 1000);
 				e.preventDefault();
 			};
@@ -289,10 +290,7 @@
 		        lat: latlng.lat(),
 		        lng: latlng.lng(),
 						icon: image,
-						title: 'Acupuncture Clinic of Solon',
-						infoWindow: {
-							content: 'Acupuncture Clinic of Solon'
-						}
+						title: 'Acupuncture Clinic of Solon'
 		      });
 		    }
 		  }

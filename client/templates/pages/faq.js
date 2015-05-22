@@ -2,7 +2,7 @@ var faqContents = [
 	{
 		number: "One",
     question: "Who needs acupuncture?",
-    answer: "<p>If you are suffering from pain or have a health problem that has not responded satisfactorily to Western medicine, you may benefit tremendously from acupuncture and herbs. In many cases, acupuncture has been more effective than conventional Western treatments. <br/>Your most valuable asset is good health. Invest in it wisely. Consider acupuncture.</p>"
+    answer: "<p>If you are suffering from pain or have a health problem that has not responded satisfactorily to Western medicine, you may benefit tremendously from acupuncture and herbs. In many cases, acupuncture has been more effective than conventional Western treatments. <br/><br/>Your most valuable asset is good health. Invest in it wisely. Consider acupuncture.</p>"
   }, {
   	number: "Two",
   	question: "What ailments do you treat?",
@@ -18,7 +18,7 @@ var faqContents = [
   }, {
   	number: "Five",
     question: "What does the patient feel during treatment?",
-    answer: "<p>Common feelings during acupuncture are local distension, heaviness, numbness, soreness, or a sensation like a tiny electric shock. All of these feelings are mild. They indicate that the healing is in progress. Notify the doctor if these feelings become uncomfortable. </p> <p> Most patients find the treatment very relaxing, which brings on a feeling of well being.Most are surprised at how comfortable they are during the treatment and how easily the needles are placed.Some people even go to sleep during the treatment.A patient may feel a slight sensation upon entry and then pressure or a“ dull” or“ surging” reaction when the needle reaches the“ Qi” or correct point.Rest assured, the needles are different from the hypodermic needles that are given in injections.The tiny needles are specifically designed to be virtually painless. </p>"
+    answer: "<p>Common feelings during acupuncture are local distension, heaviness, numbness, soreness, or a sensation like a tiny electric shock. All of these feelings are mild. They indicate that the healing is in progress. Notify the doctor if these feelings become uncomfortable. </p> <p> Most patients find the treatment very relaxing, which brings on a feeling of well being.Most are surprised at how comfortable they are during the treatment and how easily the needles are placed.Some people even go to sleep during the treatment.A patient may feel a slight sensation upon entry and then pressure or a“ dull” or“ surging” reaction when the needle reaches the“ Qi” or correct point. Rest assured, the needles are different from the hypodermic needles that are given in injections.The tiny needles are specifically designed to be virtually painless. </p>"
   }, {
   	number: "Six",
     question: "What is the procedure of treatment?",

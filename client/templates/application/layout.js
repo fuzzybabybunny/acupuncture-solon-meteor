@@ -24,3 +24,7 @@
 // 	$('head').append('<script src="/assets/startup/common-files/js/startup-kit.js"></script>');
 
 // }
+
+Meteor.startup(function() {
+  $('html').attr('lang', 'en');
+});

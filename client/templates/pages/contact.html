@@ -32,6 +32,12 @@
     {{> afQuickField name="subject"}}
     {{> afQuickField name="message" rows=10}}
     {{> afQuickField name="referral" options="allowed"}}
+ 		{{#if afFieldValueIs name="referral" value="Referring Doctor (Please Specify)"}}
+			{{> afQuickField name="doctorName"}}
+		{{/if}}
+		{{#if afFieldValueIs name="referral" value="Other (Please Specify)"}}
+			{{> afQuickField name="specificReferral" rows=2}}
+		{{/if}}
     <div>
       <button type="submit" class="btn btn-primary">Submit</button>
       <button type="reset" class="btn btn-default">Reset</button>

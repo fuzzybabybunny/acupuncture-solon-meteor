@@ -52,6 +52,29 @@ $('#list').change(function() {
 
 Template.Contact.rendered = function(){
 
+//   AutoForm.addHooks(['tagForm', 'itemForm'], {
+//     onSuccess: function(operation, result, template) {
+//       console.log(result);
+//     },
+//    onError: function(operation, error, template) {
+//      console.log(error);
+//   }
+// )};
+
+	AutoForm.hooks({
+	  contactForm: {
+	    onSuccess: function(operation, result, template) {
+	    	// console.log('operation: ', operation);
+	    	// console.log('result: ', result);
+	    	// console.log('template: ', template);
+	      alert('Thank you for your inquiry! We will get back to you shortly.');
+	    },
+	   	onError: function(operation, error, template) {
+	     	alert('There was an error with your submission. Please try again.');
+	  	}
+	  }
+	});
+
 	$(".hidden_input").hide();
 
 };

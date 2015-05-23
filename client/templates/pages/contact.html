@@ -24,6 +24,21 @@
 
 	</section>
 
+  {{#autoForm schema=contactFormSchema id="contactForm" type="method" meteormethod="sendEmail"}}
+  <fieldset>
+    <legend>Contact Us</legend>
+    {{> afQuickField name="name"}}
+    {{> afQuickField name="email"}}
+    {{> afQuickField name="subject"}}
+    {{> afQuickField name="message" rows=10}}
+    {{> afQuickField name="referral" options="allowed"}}
+    <div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-default">Reset</button>
+    </div>
+  </fieldset>
+  {{/autoForm}}
+
 	<!-- Contact-data section start -->
 
 	<section id="contact-data" class="callout-light">

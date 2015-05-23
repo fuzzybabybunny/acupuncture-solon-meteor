@@ -55,3 +55,9 @@ Template.Contact.rendered = function(){
 	$(".hidden_input").hide();
 
 };
+
+Template.Contact.helpers({
+  contactFormSchema: function() {
+    return Schema.contact;
+  }
+});

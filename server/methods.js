@@ -6,13 +6,20 @@ Meteor.methods({
 	},
 
 	sendContactEmail: function(contents){
-		check(contents, Object);
+		check(contents, Schema.contact);
 		// console.log(contents);
+		if (!contents.doctorName){
+			contents.doctorName = '';
+		};
+		if (!contents.specificReferral){
+			contents.specificReferral = '';
+		};
+		contents.message = contents.message.replace(/\r?\n/g, '<br />');
     return Meteor.Mandrill.send({
-        to: 'admin@acupuncturecleveland.com',
-        from: contents.c_email,
-        subject: contents.c_subject,
-        html: 'A new message has been sent by ' + contents.c_name + ' and they were referred by: ' + contents.c_referral + '<br /><br />' + contents.c_message
+      to: 'admin@acupuncturecleveland.com',
+      from: contents.email,
+      subject: contents.subject,
+      html: 'A new message has been sent by ' + contents.name + ' and they found us through: ' + contents.referral + ' ' + contents.doctorName + ' ' + contents.specificReferral + '<br /><br />' + contents.message
     });
 	}
 

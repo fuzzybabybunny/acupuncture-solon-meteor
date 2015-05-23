@@ -132,7 +132,28 @@
 				<div class="col-md-6 bounceInLeft">
 
 					<h4>Get in touch</h4>
-					<form id="contact-form" method="post" role="form">
+
+				  {{#autoForm schema=contactFormSchema id="contactForm" type="method" meteormethod="sendContactEmail"}}
+				  <fieldset>
+				    {{> afQuickField name="name"}}
+				    {{> afQuickField name="email"}}
+				    {{> afQuickField name="subject"}}
+				    {{> afQuickField name="message" rows=10}}
+				    {{> afQuickField name="referral" options="allowed"}}
+				 		{{#if afFieldValueIs name="referral" value="Referring Doctor (Please Specify)"}}
+							{{> afQuickField name="doctorName"}}
+						{{/if}}
+						{{#if afFieldValueIs name="referral" value="Other (Please Specify)"}}
+							{{> afQuickField name="specificReferral"}}
+						{{/if}}
+				    <div>
+				      <button type="submit" class="btn btn-primary">Submit</button>
+				      <button type="reset" class="btn btn-default">Reset</button>
+				    </div>
+				  </fieldset>
+				  {{/autoForm}}
+
+<!-- 					<form id="contact-form" method="post" role="form">
 
 						<div class="ajax-hidden">
 
@@ -184,9 +205,9 @@
 
 						</div>
 
-						<div class="ajax-response"></div><!-- Displays status when submitting form -->
+						<div class="ajax-response"></div>
 
-					</form>
+					</form> -->
 
 				</div><!-- .col -->
 

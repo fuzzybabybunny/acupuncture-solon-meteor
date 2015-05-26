@@ -20,6 +20,10 @@ Template.index.events({
 
 	'click .portfolio-item': function(){
 		$('#CaseStudyModal').modal('toggle');
+	},
+
+	'click #TestimonialModal-1-link': function(){
+		$('#TestimonialModal-1').modal('toggle');
 	}
 
 })

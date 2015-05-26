@@ -828,6 +828,12 @@ a,
 	text-align: center;
 }
 
+#testimonials-header {
+	background: url(/assets/images/p4.jpg) no-repeat center fixed;
+	-webkit-background-size: cover;
+			background-size: cover;
+}
+
 #testimonials .avatar img {
 	height: 84px;
 	width: 84px;

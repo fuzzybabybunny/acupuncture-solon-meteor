@@ -24,6 +24,18 @@ Template.index.events({
 
 	'click #TestimonialModal-1-link': function(){
 		$('#TestimonialModal-1').modal('toggle');
-	}
+	},
+
+	'click #TestimonialModal-2-link': function(){
+		$('#TestimonialModal-2').modal('toggle');
+	},
+
+	'click #TestimonialModal-3-link': function(){
+		$('#TestimonialModal-3').modal('toggle');
+	},
+
+	'click #TestimonialModal-4-link': function(){
+		$('#TestimonialModal-4').modal('toggle');
+	},
 
 })

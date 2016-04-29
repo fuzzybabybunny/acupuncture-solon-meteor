@@ -23,7 +23,10 @@ Meteor.methods({
 
     return Meteor.Mandrill.send({
       to: 'admin@acupuncturecleveland.com',
-      from: contents.email,
+      from: 'contact-form@acupuncturecleveland.com',
+      headers: {
+        'Reply-To': contents.email
+    	},
       subject: contents.subject,
       html: 'A new message has been sent by ' + contents.name + ' and they found us through: ' + contents.referral + ' ' + contents.doctorName + ' ' + contents.specificReferral + '<br /><br />Here is the original message: <br /><br />' + contents.message
     });

@@ -13,7 +13,7 @@
 
 					<div class="col-sm-12 wow bounceInDown">
 						<h2>Contact Us</h2>
-						<p>Drop us a line or give us a ring. We love to hear you.</p>
+						<p>Please note that we're retired.</p>
 					</div>
 
 				</div>
@@ -32,7 +32,7 @@
 
 			<div class="row">
 
-				<div class="col-sm-4 wow bounceInLeft">
+				<div class="col-sm-6 wow bounceInLeft">
 					<div class="service">
 						<div class="icon">
 							<i class="fa fa-envelope-o"></i>
@@ -46,7 +46,7 @@
 					</div>
 				</div>
 
-				<div class="col-sm-4 wow bounceInUp">
+				<div class="col-sm-6 wow bounceInUp">
 					<div class="service">
 						<div class="icon">
 							<i class="fa fa-phone"></i>
@@ -60,7 +60,7 @@
 					</div>
 				</div>
 
-				<div class="col-sm-4 wow bounceInRight">
+<!-- 				<div class="col-sm-4 wow bounceInRight">
 					<div class="service">
 						<div class="icon">
 							<i class="fa fa-map-marker"></i>
@@ -76,7 +76,7 @@
 							</address>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 			</div><!-- .row -->
 
@@ -92,7 +92,7 @@
 
 			<div class="row">
 
-				<div class="col-md-6 wow bounceInUp">
+<!-- 				<div class="col-md-6 wow bounceInUp">
 
           <h4>Fees</h4>
           <table class="table table-condensed">
@@ -118,24 +118,17 @@
 						<li>Mon, Wed, and Fri: 10am to 5pm</li>
 					</ul>
 					<hr/>
-<!-- 
-					<h4>Follow us</h4>
-					<ul class="icons-widget">
-						<li><a href="#"><i class="fa fa-facebook fa-fw"></i></a></li>
-						<li><a href="#"><i class="fa fa-github-alt"></i></a></li>
-						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-					</ul> -->
 
-				</div><!-- .col -->
+				</div> -->
 
-				<div class="col-md-6 bounceInLeft">
+				<div class="col-md-12 bounceInLeft">
 
-					<h4>Get in touch</h4>
+					<h4>We are retired and the clinic is now closed, but if you still need to contact us please fill out the form below.</h4>
 
 				  {{#autoForm schema=contactFormSchema id="contactForm" type="method" meteormethod="sendContactEmail"}}
 				  <fieldset>
 				    {{> afQuickField name="name"}}
+				    {{> afQuickField name="retired"}}
 				    {{> afQuickField name="email"}}
 				    {{> afQuickField name="subject"}}
 				    {{> afQuickField name="message" rows=10}}
